@@ -4,7 +4,7 @@
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of nmcs is to obtain a nested model confidence set and the LogP uncertainty measure for a given shrinkage model selection method.
+The goal of nmcs is to obtain a nested model confidence set(NMCS) and the LogP uncertainty measure for a given shrinkage model selection method.
 
 ## Installation
 
