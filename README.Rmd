@@ -21,10 +21,10 @@ The goal of nmcs is to obtain a nested model confidence set and the LogP uncerta
 
 ## Installation
 
-You can install the released version of nmcs from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of nmcs from Github with:
 
 ``` r
-install.packages("nmcs")
+devtools::install_github("YuanyuanLi96/nmcs")
 ```
 
 ## Example
