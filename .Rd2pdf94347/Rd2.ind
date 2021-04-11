@@ -1,0 +1,30 @@
+\begin{theindex}
+
+  \item $*$Topic{\large  \ \textbf  {Confidence}}
+    \subitem \texttt  {NMCS}, \hyperpage{2}
+  \item $*$Topic{\large  \ \textbf  {NMCS}}
+    \subitem \texttt  {output\_NMCS}, \hyperpage{4}
+  \item $*$Topic{\large  \ \textbf  {Nested}}
+    \subitem \texttt  {NMCS}, \hyperpage{2}
+  \item $*$Topic{\large  \ \textbf  {Set}}
+    \subitem \texttt  {NMCS}, \hyperpage{2}
+  \item $*$Topic{\large  \ \textbf  {glm,}}
+    \subitem \texttt  {Generate\_Y}, \hyperpage{2}
+  \item $*$Topic{\large  \ \textbf  {output,}}
+    \subitem \texttt  {output\_NMCS}, \hyperpage{4}
+  \item $*$Topic{\large  \ \textbf  {simulation}}
+    \subitem \texttt  {Generate\_Y}, \hyperpage{2}
+
+  \indexspace
+
+  \item \texttt  {Generate\_Y}, \hyperpage{2}
+
+  \indexspace
+
+  \item \texttt  {NMCS}, \hyperpage{2}
+
+  \indexspace
+
+  \item \texttt  {output\_NMCS}, \hyperpage{4}
+
+\end{theindex}

@@ -1,0 +1,19 @@
+Package: nmcs
+Title: Nested Model Confidence Set and LogP measure
+Version: 0.1.1
+Author: Yuanyuan Li, Jiming Jiang
+Maintainer: Yuanyuan Li<yynli9696@gmail.com>
+Description: In high-dimensional data analysis, different variables, or models, are usually chosen when applying different model selection procedures; it is not clear which model is the model suitable when selection results are different via different procedures. Alternatively, instead of focusing on a single model, one may suggest a few models as possibilities. Such a group of models naturally form a model set, which may be associated with a model confidence set (MCS). Another type of measure has to do with measuring the error in model selection, such as the LogP measure, which is an estimated logarithm of the probability of selecting a non-optimal model. Through this package, we provide functions to compute these two state-of-the-art measures of uncertainty for shrinkage model selection methods. For more details, see Li, Y., Jiang, J.(2021).
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9001
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    ncvreg,
+    gamsel,
+    glmnet,
