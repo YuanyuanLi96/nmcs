@@ -31,19 +31,6 @@ repmat = function(X, m, n) {
   matrix(t(matrix(X, mx, nx * n)), mx * m, nx * n, byrow = T)
 }
 
-#Order of predictors by lasso solution path
-#beta is the norm of coefficients matrix
-enter.list = function(beta,eps=1e-6){
-  enterall = factor(apply(beta,1,function(x)which(x>eps)[1]))
-  #break tie by their value
-  variable.order=NULL
-  for (l in levels(enterall)){
-    vnam= which(enterall==l)
-    variable.order= c(variable.order,vnam[order(beta[vnam,as.numeric(l)],decreasing = T)])
-  }
-  variable.order=c(variable.order, which(is.na(enterall)))
-  return(variable.order)
-}
 
 
 ####################Model selection using different tuning methods
@@ -67,7 +54,7 @@ cv.gam<- function(y, x,family,eps=1e-6){
   hat_M=which(alpha_norm[,index]>eps)
   predy=predict(gamsel.cv$gamsel.fit,x,index=index,type="response")
   sigmasq_est <- mean((predy-y)^2)
-  var.order= enter.list(alpha_norm)
+  var.order= enter.order(alpha_norm)
   return(list(len= length(hat_M), var.order=var.order,var_M=hat_M, predy=predy
               ,sigmasq=sigmasq_est))
 }
@@ -124,7 +111,7 @@ sel.method=function(y, x, family, penalty,tune,eps=1e-6){
     betas=betas[-1,]
   }
   #fit glm
-  var.order=enter.list(abs(betas))
+  var.order=enter.order(abs(betas))
   hat_M = which(abs(coef.beta[-1])> eps)
   len = length(hat_M)
   if (len==0){

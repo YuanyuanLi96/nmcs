@@ -2,6 +2,7 @@
 
 export(Generate_Y)
 export(NMCS)
+export(enter.order)
 export(summary_NMCS)
 import(gamsel)
 import(glmnet)

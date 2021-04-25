@@ -49,12 +49,12 @@
 #' Y=Generate_Y(predy,sigmasq = 1,n=n)
 #' alpha=c(0.05,0.1,0.3)
 #' result=NMCS(Y, X, alpha=alpha,B=B)
-#' output_NMCS(result,alpha=alpha)#NMCS result
+#' summary_NMCS(result,alpha=alpha)#NMCS result
 #' result$hat_logP#LogP measure
 #' #Binomial
 #' Y=Generate_Y(predy, n=n, family = "binomial")
 #' result=NMCS(Y, X, family="binomial",alpha=alpha, B=B)
-#' output_NMCS(result,alpha=alpha)#NMCS result
+#' summary_NMCS(result,alpha=alpha)#NMCS result
 #' result$hat_logP#LogP measure
 #' #GAM
 #' Xn=X
@@ -62,7 +62,7 @@
 #' predy_n = Xn %*% true_b
 #' Yn=Generate_Y(predy_n, n=n, family = "gam")
 #' result=NMCS(Yn, Xn, family="gam",alpha=alpha, B=B)
-#' output_NMCS(result,alpha=alpha)#NMCS result
+#' summary_NMCS(result,alpha=alpha)#NMCS result
 #' result$hat_logP#LogP measure
 
 
