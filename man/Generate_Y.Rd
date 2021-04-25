@@ -13,9 +13,9 @@ Generate_Y(predy, sigmasq = 1, n, family = "gaussian")
 
 \item{n}{sample size}
 
-\item{family}{response type. Either a character string representing one of
-the families: \code{"gaussian"}, \code{"binomial"}, \code{"gam"},
-or else a \code{glm()} family object. Default is \code{"gaussian"}.}
+\item{family}{response type. A character string representing one of
+the families: \code{"gaussian"}, \code{"binomial"}, \code{"gam"}, \code{"poission"}.
+Default is \code{"gaussian"}.}
 }
 \value{
 Returns a vector of length \code{n} with elements drawn from

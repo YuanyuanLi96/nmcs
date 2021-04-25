@@ -28,10 +28,10 @@
 #' Y = X %*% true_b + rnorm(n)
 #' alpha=c(0.05,0.1)
 #' result=NMCS(Y, X, alpha=alpha)
-#' output_NMCS(result,alpha=alpha)
+#' summary_NMCS(result,alpha=alpha)
 
 
-output_NMCS=function(nmcs.r, alpha, predictors=NULL){
+summary_NMCS=function(nmcs.r, alpha, predictors=NULL){
   if(is.null(predictors))predictors=1:length(nmcs.r$hat_M$var.order)
   hat_M= sort(predictors[nmcs.r$hat_M$var_M])
   nmcs.r.var=data.frame(CL=sapply(alpha,function(x)1-x),

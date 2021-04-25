@@ -21,8 +21,8 @@ NMCS(
 \item{X}{covariates matrix, of dimension nobs \eqn{\times} nvars;each row is an observation vector.}
 
 \item{family}{response type. Either a character string representing one of
-the families: \code{"gaussian"}, \code{"binomial"}, \code{"gam"},
-or else a \code{glm()} family object. Default is \code{"gaussian"}.}
+the families: \code{"gaussian"}, \code{"binomial"}, \code{"gam"}, \code{"poission"}.
+Default is \code{"gaussian"}.}
 
 \item{B}{number of bootstrap replicates to perform; Default value is 200.}
 

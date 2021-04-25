@@ -8,10 +8,10 @@ The goal of nmcs is to obtain a nested model confidence set and the LogP uncerta
 
 ## Installation
 
-You can install the released version of nmcs from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of nmcs from Github with:
 
 ``` r
-install.packages("nmcs")
+devtools::install_github("YuanyuanLi96/nmcs")
 ```
 
 ## Example
@@ -32,7 +32,7 @@ predy = X %*% true_b
 Y=Generate_Y(predy,sigmasq = 1,n=n)
 alpha=c(0.05,0.1,0.3)
 result=NMCS(Y, X, alpha=alpha,B=B)
-output_NMCS(result,alpha=alpha)#NMCS result
+summary_NMCS(result,alpha=alpha)#NMCS result
 #> $hat_M
 #> [1] 1 2 3
 #> 
@@ -46,7 +46,7 @@ result$hat_logP#LogP measure
 #Binomial
 Y=Generate_Y(predy, n=n, family = "binomial")
 result=NMCS(Y, X, family="binomial",alpha=alpha, B=B)
-output_NMCS(result,alpha=alpha)#NMCS result
+summary_NMCS(result,alpha=alpha)#NMCS result
 #> $hat_M
 #> [1] 1 2 3
 #> 
@@ -63,7 +63,7 @@ Xn[,2]=-1/3*X[,1]^3+rnorm(n)
 predy_n = Xn %*% true_b
 Yn=Generate_Y(predy_n, n=n, family = "gam")
 result=NMCS(Yn, Xn, family="gam",alpha=alpha, B=B)
-output_NMCS(result,alpha=alpha)#NMCS result
+summary_NMCS(result,alpha=alpha)#NMCS result
 #> $hat_M
 #> [1] 1 2 3 5
 #> 

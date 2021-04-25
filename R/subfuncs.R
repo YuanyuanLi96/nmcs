@@ -52,7 +52,7 @@ cf_norm=function(dat, nbasis){
   norm=NULL
   for (i in 1:m){
     data_i=dat[nbasis*(i-1)+1:nbasis,]
-    norm=rbind(norm, apply(data_i,2, function(x)sum(x^2)))
+    norm=rbind(norm, apply(data_i,2, function(x)sqrt(sum(x^2))))
   }
   return(norm)
 }
@@ -60,8 +60,8 @@ cv.gam<- function(y, x,family,eps=1e-6){
   n=length(y)
   bases=pseudo.bases(x,degree=6,df=4)
   gamsel.cv=cv.gamsel(x,y,bases=bases)
-  alpha_norm = (gamsel.cv$gamsel.fit$alphas)^2
-  betas_norm = cf_norm(gamsel.cv$gamsel.fit$betas,6)
+  alpha_norm = sqrt((gamsel.cv$gamsel.fit$alphas)^2)
+  #betas_norm = cf_norm(gamsel.cv$gamsel.fit$betas,6)
   #coef_norm = alpha_norm+betas_norm
   index=gamsel.cv$index.min
   hat_M=which(alpha_norm[,index]>eps)

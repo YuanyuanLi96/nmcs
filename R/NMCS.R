@@ -6,8 +6,8 @@
 #' @param Y response variable.
 #' @param X covariates matrix, of dimension nobs \eqn{\times} nvars;each row is an observation vector.
 #' @param family response type. Either a character string representing one of
-#' the families: \code{"gaussian"}, \code{"binomial"}, \code{"gam"},
-#' or else a \code{glm()} family object. Default is \code{"gaussian"}.
+#' the families: \code{"gaussian"}, \code{"binomial"}, \code{"gam"}, \code{"poission"}.
+#' Default is \code{"gaussian"}.
 #' @param B number of bootstrap replicates to perform; Default value is 200.
 #' @param alpha Significance level(s). The confidence level of NMCS set is 1-\code{alpha}.
 #' Default value is 0.05.

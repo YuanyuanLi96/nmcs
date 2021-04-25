@@ -2,7 +2,7 @@
 
 export(Generate_Y)
 export(NMCS)
-export(output_NMCS)
+export(summary_NMCS)
 import(gamsel)
 import(glmnet)
 import(ncvreg)
